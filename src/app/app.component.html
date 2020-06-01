@@ -1,0 +1,16 @@
+<div class="app-container">
+  <div>
+    <img class="main-image" [src]="mainBackgroundImgUrl" alt="">
+    <app-controls-block></app-controls-block>
+    <div class="main-container">
+      <div class="weather-time-info">
+        <app-time-block></app-time-block>
+
+      </div>
+      <app-geolocation></app-geolocation>
+    </div>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>

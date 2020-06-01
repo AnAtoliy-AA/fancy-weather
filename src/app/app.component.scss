@@ -1,0 +1,22 @@
+.app-container {
+   max-width: 100vw;
+   height: 100vh;
+  margin: 0 auto;
+
+  .main-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .main-image {
+   width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: fixed;
+    opacity:0.8;
+    z-index: -5;
+  }
+}

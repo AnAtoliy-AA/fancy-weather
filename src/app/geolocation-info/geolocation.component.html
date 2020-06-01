@@ -1,0 +1,9 @@
+<div class="geolocation">
+  <div #mapContainer id="map" class="geolocation-map"></div>
+  <div *ngIf="(geolocationInfo | async) as geoInfo">
+    <div class="geolocation-info" *ngIf="(infoNames | async) as info">
+      <p>{{ info.latitude }} : {{ geoInfo.latitudeGrad }} ° {{ geoInfo.laitudeMin }} ′</p>
+      <p>{{ info.longitude }} : {{ geoInfo.longitudeGrad }} ° {{ geoInfo.longitudeMin }} ′</p>
+    </div>
+  </div>
+</div>

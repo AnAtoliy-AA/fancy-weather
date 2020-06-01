@@ -1,0 +1,24 @@
+<div class="control-block">
+  <div class="buttons-block">
+    <button type="button" (click)="this.changeBackgroundImage()" class="btn btn-outline-info">
+      <img class="refresh-button" src="../../assets/refresh-button.png" alt="">
+    </button>
+  </div>
+  <div class="buttons-block">
+    <button type="button" (click)="changeLanguage('en')" class="btn btn-outline-info">ENG</button>
+    <button type="button" (click)="changeLanguage('ru')" class="btn btn-outline-info">RU</button>
+    <button type="button" (click)="changeLanguage('be')" class="btn btn-outline-info">BE</button>
+  </div>
+  <div class="buttons-block">
+    <button type="button" (click)="this.changeTemperatureScaleFarenheit()" class="btn btn-outline-info">F</button>
+    <button type="button" (click)="this.changeTemperatureScaleCelsius()" class="btn btn-outline-info">°C</button>
+  </div>
+  <div>
+  </div>
+  <div class="buttons-block">
+    <form class="form-inline my-2 my-lg-0" [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" formControlName="searchValue">
+      <button class="btn btn-secondary my-2 my-sm-0 search-button" type="submit">Search</button>
+    </form>
+  </div>
+</div>

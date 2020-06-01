@@ -1,0 +1,29 @@
+.geolocation {
+  
+
+h2 {
+  margin-bottom: .5rem;
+  color: darkgreen;
+}
+
+.geolocation-info {
+  background-color:  rgba(128, 128, 128, .5);
+  border-radius: 15px;
+  
+
+  p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: right;
+    padding-right: 5px;
+  }
+}
+
+.geolocation-map {
+  border-radius: 15px;
+   width: 300px;
+  height: 300px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+}

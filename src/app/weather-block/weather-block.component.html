@@ -1,0 +1,41 @@
+<div>
+
+  <div *ngIf="(currentWeather | async) as weather">
+
+    <div class="current-weather-block">
+      <div class="main-temperature">
+        <p>{{ weather.currentTemperature }}°</p>
+      </div>
+      <div class="additional-weather-info" *ngIf="(weatherInfo | async) as wInfo">
+        <img class="weather-icon_main" [src]="weather.currentWeatherIconUrl" alt="">
+        <p>{{ weather.currentWeatherDiscription }}</p>
+        <p>{{ wInfo.feelsLike}} {{ weather.currentTemperatureFeelsLike }} °</p>
+        <p>{{ wInfo.wind}} {{ weather.currentWind }} {{ wInfo.windUnits}}</p>
+        <p> {{ wInfo.humidity}} {{ weather.currentHumidity }}%</p>
+      </div>
+    </div>
+    <div class="weather-three-days">
+      <div>
+        <div class="weather-weekday">{{days[0] }}</div>
+        <div class="weather-temperature">
+          <p>{{ weather.nextDayTemperature }} °</p>
+          <img [src]="weather.nextDayWeatherIconUrl" alt="">
+        </div>
+      </div>
+      <div>
+        <div class="weather-weekday">{{ days[1] }}</div>
+        <div class="weather-temperature">
+          <p>{{ weather.nextSecondDayTemperature }} °</p>
+          <img [src]="weather.nextSecondDayWeatherIconUrl" alt="">
+        </div>
+      </div>
+      <div>
+        <div class="weather-weekday">{{ days[2] }}</div>
+        <div class="weather-temperature">
+          <p>{{ weather.nextThirdDayTemperature }} °</p>
+          <img [src]="weather.nextThirdDayWeatherIconUrl" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

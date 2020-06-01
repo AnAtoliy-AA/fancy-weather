@@ -1,0 +1,19 @@
+<div *ngIf="(timeOptionsNames | async) as timeOptions">
+  <div class="digital-clock">
+    <div class="location-name"> {{location | async}} </div>
+    <div class="day-title">
+      {{ timeOptions.weekDay }} {{ day }} {{ timeOptions.monthName }} {{ year }}
+    </div>
+    <div class="digital-time">
+      <div>{{ hour }} : {{ minute }} : {{ second }}</div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div>
+
+    <app-weather-block [days]="[timeOptions.nextWeekDay, timeOptions.secondWeekDay, timeOptions.thirdWeekDay]">
+    </app-weather-block>
+
+  </div>
+</div>
